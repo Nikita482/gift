@@ -1,0 +1,103 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.wrapperInfo{
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    font-family: "Roboto", serif;
+}
+.basketballs{
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: orange;
+    font-size: 40px;
+}
+.wrapperInfo p{
+    font-size: 18px;
+    padding: 0 50px;
+}
+.infoBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.infoBtn button{
+    width: 40%;
+    height: 30px;
+    font-size: 3vmin;
+    border-radius: 10px;
+    background: linear-gradient(to right, #c0cfff, #c9d6ff);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.35);
+    transition-duration: 300ms;
+}
+.infoBtn button:hover{
+    transform: scale(1.1);
+}
+
+.wrapperFoto{
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/craiyon_153508_A_goat_in_a_business_suit__with_sun_glasses_on__holding_a_basketball_in_one_hand__and.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+
+
+@media (max-width: 850px){
+    .wrapper{
+        display: block;
+    }
+    .wrapperInfo{
+        width: 100%;
+        height: auto;
+        margin: 50px 0;
+    }
+
+    .wrapperFoto{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .infoBtn button{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .wrapperInfo p{
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .wrapperInfo h1{
+        font-size: 6vmin;
+    }
+
+    .wrapperInfo{
+        margin: 20px 0;
+    }
+
+}
