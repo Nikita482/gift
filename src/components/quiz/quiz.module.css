@@ -1,0 +1,130 @@
+.quizContainer {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f0f0f0; /* Светло-серый фон для контейнера */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Убираем переполнение для основного контейнера */
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.progressBar {
+    height: 10px;
+    background-color: #d0d0d0; /* Серый цвет для шкалы прогресса */
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #6200ea; /* Фиолетовый */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.cardsContainer {
+    display: flex;
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    gap: 20px; /* Пробел между карточками */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+.questionCard {
+    min-width: 250px; /* Минимальная ширина для карточек вопросов */
+    background-color: #ffffff; /* Белый фон для карточек вопросов */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.questionCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.question {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.answerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Пробел между кнопками ответов */
+}
+
+.answerButton {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #6200ea; /* Фиолетовый */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.answerButton:hover {
+    background-color: #3700b3; /* Темнее при наведении */
+    transform: translateY(-1px);
+}
+
+.answerButton.correct {
+    background-color: #4caf50; /* Зеленый для правильного ответа */
+}
+
+.answerButton.incorrect {
+    background-color: #f44336; /* Красный для неправильного ответа */
+}
+
+.scoreSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submitButton {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submitButton:hover {
+    background-color: #3700b3;
+    transform: translateY(-1px);
+}
+
+
+
+
+@media (max-width: 600px) {
+    .question {
+        font-size: 18px;
+    }
+    
+    .answerButton {
+        font-size: 14px;
+    }
+    .quizContainer {
+        height: 90vh;
+        padding: 10px;
+    }
+}

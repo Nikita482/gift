@@ -1,5 +1,6 @@
 import styles from "./start.module.css"
 import { ReactNode } from "react";
+import gsap from "gsap";
 
 
 interface props{
@@ -7,6 +8,14 @@ interface props{
 }
 
 const Start: React.FC<props> = ({children}) => {
+
+    const tl = gsap.timeline()
+
+    const clickNo = () => {
+        tl.to("#btnNo", {scale: 0})
+          .to("#btnYes", {marginLeft: "-100%"})
+    }
+
     return(
         <>
             <div className={styles.wrapper}>
@@ -20,11 +29,11 @@ const Start: React.FC<props> = ({children}) => {
                         <ion-icon name="basketball"></ion-icon>
                     </div>
 
-                    <p>К сожалению, козлы украли наш любимый баскетбольный мяч! Помоги вернуть его, преодолевая забавные препятствия и решая головоломки. Готов спасти мяч?</p>
+                    <p>К сожалению, какие-то козлы украли наш любимый баскетбольный мяч! Помоги вернуть его, преодолевая забавные препятствия и решая головоломки. Готов ли ты спасти мяч?</p>
 
                     <div className={styles.infoBtn}>
-                        <button>Нет</button>
-                        {children}
+                        <button id="btnNo" className={styles.btnNo} onClick={clickNo}>Нет</button>
+                        <div id="btnYes" className={styles.btnYes}>{children}</div>
                     </div>
                 </div>
 
