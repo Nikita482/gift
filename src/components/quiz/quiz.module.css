@@ -19,7 +19,7 @@
 
 .progressBar {
     height: 10px;
-    background-color: #d0d0d0; /* Серый цвет для шкалы прогресса */
+    background-color: #d0d0d0;
     border-radius: 5px;
     margin-bottom: 30px;
 }
@@ -126,5 +126,38 @@
     .quizContainer {
         height: 90vh;
         padding: 10px;
+    }
+}
+
+
+@media (max-height: 520px) {
+    .title{
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0px;
+    }
+}
+@media (max-height: 490px) {
+    .scoreSection{
+        margin-top: 0px;
+    }
+}
+@media (max-height: 470px) {
+    .progressBar {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-height: 430px) {
+    .quizContainer {
+        height: 95vh;
+    }
+}
+
+@media (max-height: 410px) {
+    .title {
+        display: none;
     }
 }
