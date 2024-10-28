@@ -150,13 +150,9 @@
     }
 }
 
-@media (max-height: 430px) {
-    .quizContainer {
-        height: 95vh;
-    }
-}
 
-@media (max-height: 410px) {
+
+@media (max-height: 430px) {
     .title {
         display: none;
     }
