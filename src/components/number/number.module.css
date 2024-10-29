@@ -29,7 +29,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 2vmin;
+    font-size: 16px;
 }
 
 .button, .further button {
@@ -74,8 +74,8 @@
 .foto {
     height: 100%;
     aspect-ratio: 1 / 1;
-    background-image: url(../../assets/.goat.png);
-    background-size: cover;
+    background-image: url(../../assets/goat.png);
+    background-size: 100%;
     background-position: center;
     border-radius: 50%;
     margin-right: 10px;
