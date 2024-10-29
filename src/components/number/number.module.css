@@ -1,0 +1,130 @@
+.wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", serif;
+}
+
+.highlight {
+    color: #3700b3;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button, .further button {
+    margin: 10px 5px;
+    padding: 10px 30px;
+    background-color: #3700b3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 2vmin;
+}
+
+.button, .further button {
+    background-color: #5f00e3;
+}
+
+.further{
+    opacity: 0;
+}
+
+.input {
+    width: 200px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #3700b3;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.decorativeLine {
+    width: 80%;
+    height: 50px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #3700b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../../assets/.goat.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.history {
+    margin-top: 20px;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.history h2 {
+    min-width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+}
+
+.history li {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    border: 2px solid #3700b3;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+
+@media (max-width: 400px) {
+    .history{
+        display: block;
+    }
+    .history h2{
+        margin-bottom: 10px;
+    }
+}
+

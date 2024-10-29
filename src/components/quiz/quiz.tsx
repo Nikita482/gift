@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./quiz.module.css";
+import { ReactNode } from "react";
 
 interface Question {
   question: string;
@@ -9,58 +10,62 @@ interface Question {
 
 const questions: Question[] = [
     {
-      question: "Что является столицей Франции?",
-      answers: ["Берлин", "Мадрид", "Париж"],
-      correctAnswer: "Париж",
+      question: "Какое количество игроков в одной баскетбольной команде на поле?",
+      answers: ["4", "5", "6"],
+      correctAnswer: "5",
     },
     {
-      question: "Какой элемент имеет химический символ O?",
-      answers: ["Золото", "Кислород", "Водород"],
-      correctAnswer: "Кислород",
+      question: "Кто считается лучшим баскетболистом всех времен по версии NBA?",
+      answers: ["Кобе Брайант", "Майкл Джордан", "Леброн Джеймс"],
+      correctAnswer: "Майкл Джордан",
     },
     {
-      question: "Кто написал 'Гарри Поттера'?",
-      answers: ["Джоан Роулинг", "Стивен Кинг", "Джордж Р. Р. Мартин"],
-      correctAnswer: "Джоан Роулинг",
+      question: "Сколько очков приносит успешный бросок из-за трехочковой линии?",
+      answers: ["2", "3", "4"],
+      correctAnswer: "3",
     },
     {
-      question: "Какой планеты нет в нашей солнечной системе?",
-      answers: ["Плутон", "Нептун", "Ксенон"],
-      correctAnswer: "Ксенон",
+      question: "Сколько секунд команда может владеть мячом в нападении, прежде чем атаковать корзину?",
+      answers: ["12 секунд", "18 секунд", "24 секунды"],
+      correctAnswer: "24 секунды",
     },
     {
-      question: "Какой самый большой океан на Земле?",
-      answers: ["Атлантический", "Индийский", "Тихий"],
-      correctAnswer: "Тихий",
+      question: "Как называется бросок сверху в кольцо?",
+      answers: ["Трипл-дабл", "Данк", "Слэм"],
+      correctAnswer: "Данк",
     },
     {
-      question: "Сколько дней в высокосном году?",
-      answers: ["365", "366", "360"],
-      correctAnswer: "366",
+      question: "Кто является самым результативным игроком NBA за всю историю?",
+      answers: ["Карим Абдул-Джаббар", "Майкл Джордан", "Леброн Джеймс"],
+      correctAnswer: "Карим Абдул-Джаббар",
     },
     {
-      question: "Какой язык программирования используется для создания веб-страниц?",
-      answers: ["Python", "HTML", "Java"],
-      correctAnswer: "HTML",
+      question: "Какая команда NBA выиграла наибольшее количество чемпионатов?",
+      answers: ["Лос-Анджелес Лейкерс", "Бостон Селтикс", "Чикаго Буллз"],
+      correctAnswer: "Бостон Селтикс",
     },
     {
-      question: "Какой год был началом Второй мировой войны?",
-      answers: ["1939", "1945", "1941"],
-      correctAnswer: "1939",
+      question: "Какой игрок NBA был известен прозвищем 'Король'?",
+      answers: ["Леброн Джеймс", "Шакил О'Нил", "Дуэйн Уэйд"],
+      correctAnswer: "Леброн Джеймс",
     },
     {
-      question: "Какой цвет получается при смешивании красного и желтого?",
-      answers: ["Оранжевый", "Зеленый", "Фиолетовый"],
-      correctAnswer: "Оранжевый",
+      question: "В каком году баскетбол стал олимпийским видом спорта?",
+      answers: ["1936", "1952", "1968"],
+      correctAnswer: "1936",
     },
     {
-      question: "Кто является автором 'Войны и мира'?",
-      answers: ["Федор Достоевский", "Лев Толстой", "Антон Чехов"],
-      correctAnswer: "Лев Толстой",
+      question: "Как называется командная защита, когда каждый игрок следит за своим соперником?",
+      answers: ["Зонная защита", "Индивидуальная защита", "Командное перекрытие"],
+      correctAnswer: "Индивидуальная защита",
     },
-  ];
+];
 
-const Quiz: React.FC = () => {
+interface props{
+    children: ReactNode;
+}
+
+const Quiz: React.FC<props> = ({children}) => {
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>(Array(questions.length).fill(""));
   const [answered, setAnswered] = useState<boolean[]>(Array(questions.length).fill(false));
 
@@ -119,10 +124,9 @@ const Quiz: React.FC = () => {
           ))}
         </div>
 
-        {/* Кнопка "Закончить викторину", появляющаяся после ответов на все вопросы */}
         {allAnswered && (
           <div className={styles.scoreSection}>
-            <button className={styles.submitButton}>Закончить викторину</button>
+            {children}
           </div>
         )}
       </div>

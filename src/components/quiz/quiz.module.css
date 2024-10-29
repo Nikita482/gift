@@ -95,24 +95,6 @@
     margin-top: 20px;
 }
 
-.submitButton {
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #6200ea;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}
-
-.submitButton:hover {
-    background-color: #3700b3;
-    transform: translateY(-1px);
-}
-
-
 
 
 @media (max-width: 600px) {
@@ -149,8 +131,6 @@
         margin-bottom: 0px;
     }
 }
-
-
 
 @media (max-height: 430px) {
     .title {
