@@ -74,7 +74,7 @@
 .foto {
     height: 100%;
     aspect-ratio: 1 / 1;
-    background-image: url(../../assets/.goat.webp);
+    background-image: url(../../assets/.goat.png);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
