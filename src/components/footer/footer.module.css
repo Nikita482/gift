@@ -23,6 +23,7 @@ h2 {
 
 p {
     color: #333; /* Темный цвет для текста */
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -35,6 +36,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 18px;
 }
 
 .playAgain:hover {
