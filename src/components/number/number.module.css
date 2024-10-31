@@ -138,3 +138,19 @@
         margin-right: 10px;
     }
 }
+
+
+@media (max-height: 570px) {
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 520px) {
+    .input {
+        margin: 10px 0;
+    }
+    p, .message, .highlight{
+        margin: 0;
+    }
+}
