@@ -56,7 +56,6 @@ const Number: React.FC<Props> = ({ children }) => {
             <button className={styles.button} onClick={handleGuess}>Угадать</button>
 
             {guess !== null && (<p className={`${styles.message} ${styles.highlight}`}>{message}</p>)}
-            <div id="further"className={styles.further}>{children}</div>
 
             {guessHistory.length > 0 && (
                 <div className={styles.history}>
@@ -70,6 +69,7 @@ const Number: React.FC<Props> = ({ children }) => {
                 </div>
             )}
 
+            <div id="further"className={styles.further}>{children}</div>
         </div>
     );
 };
