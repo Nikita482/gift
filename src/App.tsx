@@ -5,6 +5,8 @@ import gsap from 'gsap';
 import Start from './components/start/start';
 import Quiz from './components/quiz/quiz';
 import Number from './components/number/number';
+import Play from './components/play/play';
+import Footer from './components/footer/footer';
 
 
 const App: React.FC = () => {
@@ -21,6 +23,16 @@ const App: React.FC = () => {
       .to("#number", {display: "flex", opacity: 1})
   }
 
+  const ckickFurther = () => {
+    tl.to("#number", {opacity: 0, display: "none"})
+      .to("#Play", {display: "flex", opacity: 1})
+  }
+
+  const ckickPlay = () => {
+    tl.to("#Play", {opacity: 0, display: "none"})
+      .to("#Footer", {display: "flex", opacity: 1})
+  }
+  
 
   return (
     <>
@@ -38,10 +50,19 @@ const App: React.FC = () => {
 
       <div id="number" className={styles.wrapperNumber}>
         <Number>
-          <button>Далее</button>
+          <button onClick={ckickFurther}>Далее</button>
         </Number>
       </div>
 
+      <div id="Play" className={styles.wrapperPlay}>
+        <Play>
+          <button onClick={ckickPlay}>Далее</button>
+        </Play>
+      </div>
+
+      <div id="Footer" className={styles.wrapperFooter}>
+        <Footer />
+      </div>
      </div>
     </>
   )

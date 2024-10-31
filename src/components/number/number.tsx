@@ -16,7 +16,7 @@ const Number: React.FC<Props> = ({ children }) => {
 
     // Выводим загаданное число в консоль для отладки
     useEffect(() => {
-        console.log("Загаданное число:", randomNumber); // <--- Здесь выводим загаданное число
+        console.log("Загаданное число:", randomNumber); 
     }, [randomNumber]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,19 +27,20 @@ const Number: React.FC<Props> = ({ children }) => {
         const num = parseInt(inputValue);
         if (!isNaN(num)) {
             setGuess(num);
-            setGuessHistory([num, ...guessHistory]); // Добавляем число в начало массива
+            setGuessHistory([num, ...guessHistory]); 
             if (num === randomNumber) {
                 setMessage("Поздравляю! Вы угадали число.");
                 gsap.to("#further", {opacity: 1})
             } else if (num < randomNumber) {
-                setMessage("Ваше число меньше загаданного.");
-            } else {
                 setMessage("Ваше число больше загаданного.");
+            } else {
+                setMessage("Ваше число меньше загаданного.");
             }
         } else {
             setMessage("Пожалуйста, введите допустимое число.");
         }
-    };
+    }
+
 
     return (
         <div className={styles.wrapper}>
@@ -55,7 +56,7 @@ const Number: React.FC<Props> = ({ children }) => {
             <button className={styles.button} onClick={handleGuess}>Угадать</button>
 
             {guess !== null && (<p className={`${styles.message} ${styles.highlight}`}>{message}</p>)}
-            <div id="further" className={styles.further}>{children}</div>
+            <div id="further"className={styles.further}>{children}</div>
 
             {guessHistory.length > 0 && (
                 <div className={styles.history}>

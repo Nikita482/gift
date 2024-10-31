@@ -32,7 +32,7 @@
     font-size: 16px;
 }
 
-.button, .further button {
+.button:hover, .further button:hover {
     background-color: #5f00e3;
 }
 
