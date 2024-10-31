@@ -69,7 +69,7 @@
 
 .cardBack {
     background-color: #f44336;
-    transform: rotateY(0deg);
+    transform: rotateY(180deg);
 }
 
 .buttonContainer button{

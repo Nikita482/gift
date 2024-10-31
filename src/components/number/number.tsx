@@ -32,9 +32,9 @@ const Number: React.FC<Props> = ({ children }) => {
                 setMessage("Поздравляю! Вы угадали число.");
                 gsap.to("#further", {opacity: 1})
             } else if (num < randomNumber) {
-                setMessage("Ваше число больше загаданного.");
-            } else {
                 setMessage("Ваше число меньше загаданного.");
+            } else {
+                setMessage("Ваше число больше загаданного.");
             }
         } else {
             setMessage("Пожалуйста, введите допустимое число.");
